@@ -7,4 +7,4 @@ npm install
 npm run dev
 ```
 
-`npm run build` writes `dist/`. The site is published to GitHub Pages from the `main` branch at `https://go-mist.github.io/mist-docs/`.
+`npm run build` writes `dist/`. The site is published from the `go-mist.github.io` repository to `https://go-mist.github.io/`.

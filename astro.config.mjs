@@ -4,7 +4,6 @@ import starlight from '@astrojs/starlight';
 
 export default defineConfig({
 	site: 'https://go-mist.github.io',
-	base: '/mist-docs',
 	integrations: [
 		starlight({
 			title: 'mist',
