@@ -29,4 +29,4 @@ A statement that fails rolls the whole batch back on PostgreSQL, HighGo, SQLite,
 
 Changing an already applied `migration.sql` makes `Run` return `HashError`. Leave the old directory as it is.
 
-Next: [Dialects](/dialects/).
+Next: [Dialects](../dialects/).

@@ -12,4 +12,4 @@ go install github.com/go-mist/mist/cmd/mist@latest
 
 The database driver you import depends on the dialect. The root package does not import one.
 
-Next: [Define a table](/define/).
+Next: [Define a table](../define/).

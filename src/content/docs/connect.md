@@ -24,6 +24,6 @@ Each `Open` returns its own pool. That pool implements `mist.DB`.
 
 HighGo uses port `5866`. KingbaseES uses port `54321`. Import paths are `github.com/go-mist/mist/dialect/pg` and the same pattern for `mysql`, `sqlite`, `oracle`, `mssql`, and `dm`.
 
-Limits for each database are on [Dialects](/dialects/).
+Limits for each database are on [Dialects](../dialects/).
 
-Next: [Insert](/insert/).
+Next: [Insert](../insert/).

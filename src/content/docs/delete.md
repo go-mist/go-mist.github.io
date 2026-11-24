@@ -11,4 +11,4 @@ n, err := pg.Delete(Users).
 
 `n` is the number of rows affected.
 
-Next: [Transactions](/transactions/).
+Next: [Transactions](../transactions/).

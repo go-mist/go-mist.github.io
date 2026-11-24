@@ -17,4 +17,4 @@ err := db.Tx(ctx, func(tx mist.Tx) error {
 
 Queries take `mist.Tx` the same way they take `mist.DB`.
 
-Next: [Migrate](/migrate/).
+Next: [Migrate](../migrate/).

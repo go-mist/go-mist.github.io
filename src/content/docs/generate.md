@@ -11,4 +11,4 @@ go generate ./...
 
 The generated value for `User` is `Users`. Queries use `Users.ID` and `Users.Name`.
 
-Next: [Connect](/connect/).
+Next: [Connect](../connect/).

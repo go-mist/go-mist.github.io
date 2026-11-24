@@ -34,4 +34,4 @@ Write the SQL type when you want a specific one: `mist:"id,bigserial,pk"`, `mist
 
 This describes the table. It does not create it.
 
-Next: [Generate](/generate/).
+Next: [Generate](../generate/).

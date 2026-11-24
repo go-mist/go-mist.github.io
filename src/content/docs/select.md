@@ -27,4 +27,4 @@ users, err := pg.Select(Users.ID, Users.Name).
 
 `Take` returns the first row and ignores the rest.
 
-Next: [Where](/where/).
+Next: [Where](../where/).

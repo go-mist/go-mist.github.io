@@ -14,4 +14,4 @@ n, err := pg.Insert(Users).
 
 The same call exists on `mysql`, `sqlite`, `oracle`, `mssql`, and `dm`. The examples on this site use `pg`.
 
-Next: [Select](/select/).
+Next: [Select](../select/).

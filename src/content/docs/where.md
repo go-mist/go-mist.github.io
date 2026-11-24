@@ -17,4 +17,4 @@ pg.Select(Users.ID, Users.Name).
 
 `op.Like`, `op.ILike`, `op.IsNull`, `op.IsNotNull`, `op.InArray`, and `op.Between` are the other common ones. An empty `op.InArray` is `1 = 0`.
 
-Next: [Update](/update/).
+Next: [Update](../update/).

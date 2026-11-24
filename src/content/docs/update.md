@@ -12,4 +12,4 @@ n, err := pg.Update(Users).
 
 `n` is the number of rows affected.
 
-Next: [Delete](/delete/).
+Next: [Delete](../delete/).
