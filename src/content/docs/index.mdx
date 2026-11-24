@@ -1,0 +1,44 @@
+---
+title: mist
+description: SQL query builder for Go.
+template: splash
+hero:
+  tagline: SQL query builder for Go.
+  actions:
+    - text: Install
+      link: /install/
+      icon: right-arrow
+      variant: primary
+    - text: GitHub
+      link: https://github.com/go-mist/mist
+      icon: external
+      variant: minimal
+---
+
+import Databases from '../../components/Databases.astro';
+
+mist builds SQL and scans the rows. PostgreSQL, MySQL, MariaDB, SQLite, Oracle, SQL Server, Dameng, HighGo, and KingbaseES. HighGo and KingbaseES use the PostgreSQL package. MariaDB uses the MySQL package.
+
+<Databases />
+
+## Example
+
+Define a table, generate the columns, then read one row.
+
+```go
+type User struct {
+	ID   int64  `mist:"id,pk"`
+	Name string `mist:"name,notnull"`
+}
+
+func (User) Table() mist.TableMeta { return mist.TableMeta{Name: "users"} }
+```
+
+```go
+user, err := pg.Select(Users.ID, Users.Name).
+	From(Users).
+	Where(op.Eq(Users.ID, int64(1))).
+	One(ctx, db)
+```
+
+Next: [Install](/install/).

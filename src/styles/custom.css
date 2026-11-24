@@ -1,0 +1,37 @@
+.db-grid {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 0.75rem;
+	margin: 1.5rem 0 2rem;
+}
+
+.db-card {
+	display: flex;
+	align-items: center;
+	gap: 0.7rem;
+	min-height: 3.25rem;
+	padding: 0.65rem 0.9rem;
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 0.7rem;
+	background: var(--sl-color-bg);
+	color: var(--sl-color-white);
+	text-decoration: none;
+	font-weight: 500;
+}
+
+.db-card:hover {
+	border-color: var(--sl-color-accent);
+}
+
+.db-card img {
+	width: 1.6rem;
+	height: 1.6rem;
+	object-fit: contain;
+	flex: none;
+}
+
+@media (max-width: 50rem) {
+	.db-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
