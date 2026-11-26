@@ -38,6 +38,8 @@ export default defineConfig({
 					items: [
 						{ label: 'Migrate', slug: 'migrate' },
 						{ label: 'Dialects', slug: 'dialects' },
+						{ label: 'From GORM', slug: 'from-gorm' },
+						{ label: 'From sqlc', slug: 'from-sqlc' },
 					],
 				},
 			],

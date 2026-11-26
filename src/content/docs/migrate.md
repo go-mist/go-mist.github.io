@@ -3,11 +3,14 @@ title: Migrate
 description: Apply a folder of forward migrations.
 ---
 
-`migrate.Run` applies directories whose names are not yet in the migration table. Each directory holds `up.sql`, `down.sql`, and `snapshot.json`. `Run` applies `up.sql`. `down.sql` is reserved and is not applied. The hash is the bytes of `up.sql`.
+`migrate.Run` applies directories whose names are not yet in the migration table. Each directory holds `up.sql`, `down.sql`, and `snapshot.json`. `Run` applies `up.sql`. `migrate.Down` runs the latest applied `down.sql` and deletes that row. `DownTo` keeps the named migration and rolls back every later one. `down.sql` is handwritten. A placeholder, or a file with no statements, is refused and the row stays. The hash is the bytes of `up.sql`.
 
 ```
 mist ddl -dir . -migrations migrations -write -name init
 mist migrate -migrations migrations
+mist down -migrations migrations
+mist down -migrations migrations -to 20261123135846_init
+mist down -migrations migrations -all
 ```
 
 Each migration is a directory:

@@ -15,7 +15,7 @@ Six packages live under `github.com/go-mist/mist/dialect/`. HighGo and KingbaseE
 
 ## MariaDB
 
-Same package and same SQL as MySQL. `FindMany` writes `LATERAL`, which current MariaDB rejects. A `JSON` column reads back as `longtext` plus a `json_valid` check.
+Same package and same SQL as MySQL. `FindMany` is a correlated subquery with `json_arrayagg`, which current MariaDB accepts. A `JSON` column reads back as `longtext` plus a `json_valid` check.
 
 ## SQLite
 
@@ -31,7 +31,7 @@ Brackets, `@p1`, `TOP`, `OUTPUT`, and `OFFSET` / `FETCH`. `returning` stays an e
 
 ## Dameng
 
-Double quotes, `?`, `LIMIT` / `OFFSET`, and `WITH`. The `RECURSIVE` keyword is rejected, so a recursive query is written as plain `WITH`. `returning` is not rewritten as `RETURNING INTO`. `on conflict` is not rewritten as `MERGE`. `FindMany` is not implemented. Migration, `ddl`, and `push` have not been run on a Dameng server.
+Double quotes, `?`, `LIMIT` / `OFFSET`, and `WITH`. The `RECURSIVE` keyword is rejected, so a recursive query is written as plain `WITH`. `returning` is not rewritten as `RETURNING INTO`. `on conflict` is not rewritten as `MERGE`. `FindMany` concatenates JSON and collects it with `LISTAGG`, because this server has no `LATERAL`. DDL is not wrapped in a transaction.
 
 ## HighGo
 
